@@ -1,21 +1,18 @@
 
 # Hyperpower
 
-Extension for Hyper that turns on power mode, with bonus `wow` mode.
+Extension for Hyper that answers questions for you! Have you ever wondered why you're asked if you want to terminate a batch? Have you ever answered "No"? Me neither, then this is for you!
 
 ![hyper](https://cloud.githubusercontent.com/assets/13041/16820268/13c9bfe6-4905-11e6-8fe4-baf8fc8d9293.gif)
 
-**Note:** shaking is only enabled in wow mode now! Which makes `hyperpower` an extension that you can use full time :P
-
 ## How to use
 
-Install [Hyper](https://hyper.is) and add `hyperpower`
+Install [Hyper](https://hyper.is) and add `hyper-yes`
 to `plugins` in `~/.hyper.js`.
 
 ## Credits
 
-Based on [`power-mode`](https://atom.io/packages/power-mode) and
-[`rage-power`](https://github.com/itszero/rage-power).
+A deep bow to @sgraham without him I would never even have thought about this message. This is a low tech implementation of the reason he started cmdEx.
 
 ## License
 
