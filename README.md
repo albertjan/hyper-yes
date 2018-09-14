@@ -1,5 +1,5 @@
 
-# Hyperpower
+# Hyper Yes!
 
 Extension for Hyper that answers questions for you! Have you ever wondered why you're asked if you want to terminate a batch? Have you ever answered "No"? Me neither, then this is for you!
 
