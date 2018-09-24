@@ -1,7 +1,9 @@
 
 # Hyper Yes!
 
-Extension for Hyper that answers questions for you! Have you ever wondered why you're asked if you want to terminate a batch? Have you ever answered "No"? Me neither, then this is for you!
+Extension for Hyper that answers questions for you! Have you ever wondered why you're asked if you want to terminate a batch? Have you ever answered "No"? Me neither, then this is for you!!
+
+![show me show me](https://raw.githubusercontent.com/albertjan/hyper-yes/master/hyper-yes.gif)
 
 ## How to use
 
