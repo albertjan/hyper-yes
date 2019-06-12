@@ -1,7 +1,3 @@
-const actionTerminations = require('./actionTerminations');
-const answeredTerminations = require('./answeredTerminations');
-const unansweredTerminations = require('./unansweredTerminations');
-
 function sendSessionData(uid, data, escaped) {
   return (dispatch, getState) => {
     dispatch({
@@ -29,10 +25,7 @@ exports.middleware = (store) => (next) => (action) => {
         sendSessionData(action.uid, 'y\r')(store.dispatch, store.getState);
       }
       // we don't even want to see the message!
-      const regex = actionTerminations.find((item) => item.test(action.data));
-      if (regex) {
-        action.data.replace(regex, "");
-      }
+      action.data = action.data.replace(/Terminate batch job \(Y\/N\)\?.{2}/, "");
       next(action);
     } else {
       next(action);
@@ -46,8 +39,8 @@ exports.middleware = (store) => (next) => (action) => {
 // at the command line. Currently it supports output from bash, zsh, fish, cmd and powershell.
 function detectTerminateBatchJob(data, unanswered) {
   if (unanswered) {
-    return !!unansweredTerminations.find((regex) => regex.test(data));;
+    return /Terminate batch job \(Y\/N\)\?[^\s]/g.test(data);
   }
 
-  return !!answeredTerminations.find((regex) => regex.test(data));
+  return /Terminate batch job \(Y\/N\)\?/g.test(data);
 }
