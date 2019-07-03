@@ -14,10 +14,6 @@ function sendSessionData(uid, data, escaped) {
 }
 
 exports.middleware = (store) => (next) => (action) => {
-  console.log(action.type);
-  if (['SESSION_ADD_DATA', 'SESSION_USER_DATA', 'SESSION_PTY_DATA'].indexOf(action.type) >= 0) {
-    console.log(action.type + ": " + action.data);
-  }
   if ('SESSION_PTY_DATA' === action.type) {
     const { data } = action;
     if (detectTerminateBatchJob(data)) {
